@@ -1,0 +1,29 @@
+.strip{
+    display: flex;
+    height: 300px;
+    margin-bottom: 1rem;
+
+    &.foward{
+        animation: move-foward 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+    }
+
+    &.backwards{
+        animation: move-backwards 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+    }
+}
+
+@keyframes move-foward{
+    to {
+        transform: translateX(600px);
+    }
+}
+
+@keyframes move-backwards{
+    to {
+        transform: translateX(-600px);
+    }
+}
